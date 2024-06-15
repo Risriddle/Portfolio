@@ -1,59 +1,79 @@
-/**
- * Portfolio component
- *
- * Highlights some of  your creations. These can be designs, websites,
- * open source contributions, articles you've written and more.
- *
- * This is a great area for you to to continually add to and refine
- * as you continue to learn and create.
- */
+
 
 import React from "react";
 
-/**
- * Desk image
- *
- * Below is a sample desk image. Feel free to update this to an image of your choice,
- * updating below imageAltText to string that represents what you see in that image.
- *
- * Need an image? Check out https://unsplash.com to download a photo you
- * freely use on your site.
- */
-import image from "../images/design-desk.jpeg";
+import image from "../images/img.jpeg";
 
-const imageAltText = "desktop with books and laptop";
+const imageAltText = "portfolio page image";
 
-/**
- * Project list
- *
- * An array of objects that will be used to display for your project
- * links section. Below is a sample, update to reflect links you'd like to highlight.
- */
+
 const projectList = [
   {
-    title: "10 Things To Know About Azure Static Web Apps 🎉",
+    title: "Library Genesis",
     description:
-      "Collaboration to create a beginner friendly article to help explain Azure Static Web Apps and tooling to get started.",
-    url: "https://dev.to/azure/10-things-to-know-about-azure-static-web-apps-3n4i",
+      "A website created using flask framework for accessing book pdfs.",
+    url: "https://librarygenesis.onrender.com/",
   },
   {
-    title: "Web Development for Beginners",
+    title: "Url Shortener",
     description:
-      "Contributed sketch note imagery to accompany each lesson. These help provide visual representation of what is being taught.",
-    url: "https://github.com/microsoft/web-dev-for-beginners",
+      "Can generate shorter urls and even custom made urls.",
+    url: "https://github.com/Risriddle/UrlShortener",
   },
   {
-    title: "My Resume Site",
+    title: "Movie Reviews",
     description:
-      "Created from Microsoft's resume workshop and deployed to GitHub pages. Includes my experience and design abilities.",
-    url: "https://github.com/microsoft/workshop-library/tree/main/full/build-resume-website",
+      "Made using Django framework.Can review movies fetched from an api and view ratings and movie data.",
+    url: "https://github.com/Risriddle/MovieReviewDjango",
   },
   {
-    title: "GitHub Codespaces and github.dev",
+    title: "Chat app",
     description:
-      "Video interview to explain when to use GitHub.dev versus GitHub Codespaces, and how best to use each tool.",
-    url: "https://www.youtube.com/watch?v=c3hHhRME_XI",
+      "Made using flask and websockets.enables private communication by creating different chat rooms which can be accessed by usernames",
+    url: "https://github.com/Risriddle/chatApp",
   },
+  {
+  title: "Payment Portal",
+    description:
+      "A Payment gateway created using Razorpay api implemented in python(flask).Can be used for upi as well as card payments.Can be used as a template and integrated in websites.",
+    url: "https://github.com/Risriddle/paymentPortal",
+  },
+  {
+    title: "Online Compiler",
+      description:
+        "Made using MERN stack.",
+      url: "https://github.com/Risriddle/onlineCompiler",
+    },
+    {
+      title: "React Dictionary",
+        description:
+          "A dictionary made using react framework",
+        url: "https://github.com/Risriddle/ReactDictionary",
+      },
+      {
+        title: "Number Converter",
+          description:
+            "A conversion site to convert numbers from one base type to another.",
+          url: "https://github.com/Risriddle/NumberConverter",
+        },
+        {
+          title: "Alien Eliminator",
+            description:
+              "A game created using python's pygame library. Consists of three levels",
+            url: "https://github.com/Risriddle/alienEliminator",
+          },
+          {
+            title: "Send and Verify OTP",
+              description:
+                "An api for sending and verifying otps on mails.Made using python and brevo api.",
+              url: "https://github.com/Risriddle/sendVerifyOTP",
+            },
+            {
+              title: "Blog Express",
+                description:
+                  "A blog site created using express framework,mongoose,mongodb and jade(pug) template engine.",
+                url: "https://github.com/Risriddle/BlogExpress",
+              },
 ];
 
 const Portfolio = () => {

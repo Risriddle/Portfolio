@@ -16,27 +16,31 @@ import React from "react";
  * Need an image? Check out https://unsplash.com to download a image you
  * freely use on your site.
  */
-import image from "../images/motion-background.jpg";
+import image from "../images/bk.jpeg";
 
-const imageAltText = "purple and blue abstract background";
+const imageAltText = "blue abstract background";
 
 /**
  * Sort description that expands on your title on the Home component.
  */
 const description =
-  "I'm a UI/UX student studying at Barnett Technical University. I enjoy creating unique and simplistic user interfaces in creative ways.";
+  "I'm a BTech student studying at ABVGIET Technical University. I enjoy creating and building using computers and programming languages.";
 
 /**
  * List of some of skills or technologies you work on, are learning,
  * passionate about, or enjoy,
  */
 const skillsList = [
-  "Web design",
-  "User experience",
-  "Inclusive design",
-  "Focus group testing",
-  "Mobile user interfaces",
-  "Graphic design",
+  "Python",
+  "Flask",
+  "Django",
+  "Nodejs",
+  "Mongodb",
+  "MySQL",
+  "Express",
+  "Java",
+  "C++",
+  "MERN"
 ];
 
 /**
@@ -45,7 +49,7 @@ const skillsList = [
  * about you on a professional level.
  */
 const detailOrQuote =
-  "I am passionate about solving problems in new creative ways to drive innovation. By leveraging my UI/UX experience I continually look for new and better ways to make tech accessible by all.";
+  "I am a developer constantly learning new ways to interact with computers and get better at it.Apart from coding I am into astronomy,sprituality and reading books.";
 
 const About = () => {
   return (
@@ -72,6 +76,7 @@ const About = () => {
             gap: "3rem",
           }}
         >
+          <h2>Tech Stack & Skills</h2>
           {skillsList.map((skill) => (
             <li key={skill}>{skill}</li>
           ))}
