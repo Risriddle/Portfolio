@@ -1,35 +1,11 @@
-/**
- * About component
- *
- * Space for you to describe more about yourself.
- */
-
 import React from "react";
-
-/**
- * About background image
- *
- * Below is a sample image. Upload the image of your choice into the "images"
- * directory and import here for use. Then, set imageAltText to string that 
- * represents what you see in that image.
- *
- * Need an image? Check out https://unsplash.com to download a image you
- * freely use on your site.
- */
-import image from "../images/bk.jpeg";
+import image from "../images/ab.jpeg";
 
 const imageAltText = "blue abstract background";
 
-/**
- * Sort description that expands on your title on the Home component.
- */
 const description =
   "I'm a BTech student studying at ABVGIET Technical University. I enjoy creating and building using computers and programming languages.";
 
-/**
- * List of some of skills or technologies you work on, are learning,
- * passionate about, or enjoy,
- */
 const skillsList = [
   "Python",
   "Flask",
@@ -40,49 +16,98 @@ const skillsList = [
   "Express",
   "Java",
   "C++",
-  "MERN"
+  "MERN",
 ];
 
-/**
- * Use this to give more information about what you are passionate about,
- * how you best work, or even a quote. This will help someone learn more
- * about you on a professional level.
- */
 const detailOrQuote =
-  "I am a developer constantly learning new ways to interact with computers and get better at it.Apart from coding I am into astronomy,sprituality and reading books.";
+  "I am a developer constantly learning new ways to interact with computers and get better at it. Apart from coding I am into astronomy, spirituality, and reading books.";
 
 const About = () => {
+  const styles = {
+    section: {
+      position: "relative",
+      overflow: "hidden",
+      borderRadius: "8px",
+      boxShadow: "0 4px 8px rgba(0, 0, 0, 0.1)",
+      padding: "40px 20px", // Add padding to create space
+    },
+    background: {
+      position: "absolute",
+      top: 0,
+      left: 0,
+      width: "100%",
+      height: "100%",
+      objectFit: "cover",
+      zIndex: -1,
+      // filter: "brightness(20%)", // Optional: adjust brightness for overlay effect
+    },
+    content: {
+      position: "relative",
+      color:"white",
+      // backgroundColor: "rgba(255, 255, 255, 0.85)", // Slightly reduce opacity
+      padding: "20px",
+      // borderRadius: "8px",
+      // boxShadow: "0 4px 8px rgba(0, 0, 0, 0.1)",
+      // maxWidth: "800px",
+      // margin: "0 auto",
+      textAlign: "center",
+      // zIndex: 1,
+    },
+    heading: {
+      fontSize: "28px",
+      color: "white",
+      marginBottom: "15px",
+    },
+    large: {
+      fontSize: "18px",
+      lineHeight: "1.6",
+      color: "white",
+    },
+    hr: {
+      border: "none",
+      borderTop: "1px solid #ccc",
+      margin: "20px 0",
+    },
+    list: {
+      listStyleType: "none",
+      padding: "0",
+      display: "flex",
+      flexWrap: "wrap",
+      justifyContent: "center",
+    },
+    listItem: {
+      fontSize: "16px",
+      color: "black",
+      marginBottom: "8px",
+      marginRight: "10px",
+      padding: "8px",
+      backgroundColor: "#f0f0f0",
+      borderRadius: "4px",
+    },
+    quote: {
+      fontSize: "16px",
+      color: "white",
+      lineHeight: "1.6",
+    },
+  };
+
   return (
-    <section className="padding" id="about">
-      <img className="background" src={image} alt={imageAltText} />
-      <div
-        style={{
-          backgroundColor: "white",
-          width: "50%",
-          padding: "4rem",
-          margin: "3rem auto",
-          textAlign: "center",
-        }}
-      >
-        <h2>About Myself</h2>
-        <p className="large">{description}</p>
-        <hr />
-        <ul
-          style={{
-            textAlign: "left",
-            columns: 2,
-            fontSize: "1.25rem",
-            margin: "2rem 3rem",
-            gap: "3rem",
-          }}
-        >
-          <h2>Tech Stack & Skills</h2>
-          {skillsList.map((skill) => (
-            <li key={skill}>{skill}</li>
+    <section style={styles.section} id="about">
+      <img style={styles.background} src={image} alt={imageAltText} />
+      <div style={styles.content}>
+        <h2 style={styles.heading}>About Myself</h2>
+        <p style={styles.large}>{description}</p>
+        <hr style={styles.hr} />
+        <h2 style={styles.heading}>Tech Stack & Skills</h2>
+        <ul style={styles.list}>
+          {skillsList.map((skill, index) => (
+            <li key={index} style={styles.listItem}>
+              {skill}
+            </li>
           ))}
         </ul>
-        <hr />
-        <p style={{ padding: "1rem 3rem 0" }}>{detailOrQuote}</p>
+        <hr style={styles.hr} />
+        <p style={styles.quote}>{detailOrQuote}</p>
       </div>
     </section>
   );

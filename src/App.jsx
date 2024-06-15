@@ -1,4 +1,3 @@
-
 import React from "react";
 
 import About from "./Components/About";
@@ -8,7 +7,6 @@ import Home from "./Components/Home";
 import Portfolio from "./Components/Portfolio";
 
 import "./styles.css";
-
 
 const siteProps = {
   name: "Rishita Sharma",

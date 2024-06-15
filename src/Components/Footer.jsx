@@ -1,4 +1,3 @@
-
 import React from "react";
 import PropTypes from "prop-types";
 
@@ -11,8 +10,6 @@ import mediumIcon from "../images/socials/medium.svg";
 import twitterIcon from "../images/socials/twitter.svg";
 import youTubeIcon from "../images/socials/youtube.svg";
 
-
-
 const Footer = (props) => {
   const {
     devDotTo,
@@ -22,44 +19,74 @@ const Footer = (props) => {
     linkedIn,
     medium,
     name,
-    primaryColor,
+    // primaryColor,
     twitter,
     youTube,
   } = props;
 
+  const styles = {
+    footer: {
+      display: "flex",
+      flexDirection: "column",
+      alignItems: "center",
+      gap: "2.5rem",
+      padding: "5rem 0 3rem",
+      background: "linear-gradient(135deg, #000000, #6A0DAD)", // Gradient background from black to purple
+      width: "100vw",
+      position: "relative",
+      color: "#fff",
+      borderRadius: "20px", // Rounded corners
+    },
+    micIcon: {
+      height: "50px",
+      width: "50px",
+      position: "absolute",
+      top: "1rem",
+      left: "1rem",
+    },
+    socialIcons: {
+      display: "flex",
+      justifyContent: "center",
+      gap: "2.5rem",
+    },
+    link: {
+      textDecoration: "none",
+      color: "#fff",
+      transition: "color 0.3s ease",
+    },
+    socialIcon: {
+      height: "30px",
+      width: "30px",
+    },
+  };
+
   return (
-    <div
-      id="footer"
-      style={{
-        display: "flex",
-        flexDirection: "column",
-        alignItems: "center",
-        gap: "2.5rem",
-        padding: "5rem 0 3rem",
-        backgroundColor: primaryColor,
-        width: "100vw"
-      }}
-    >
-      <div
-        style={{
-          display: "flex",
-          justifyContent: "center",
-          gap: "2.5rem",
-        }}
-      >
+    <div id="footer" style={styles.footer}>
+      {/* <img src={purpleMicIcon} alt="Purple Mic" style={styles.micIcon} /> */}
+      <div style={styles.socialIcons}>
         {email && (
-          <a href={`mailto:${email}`}>
-            <img src={envelopeIcon} alt="email" className="socialIcon" />
+          <a href={`mailto:${email}`} style={styles.link}>
+            <img src={envelopeIcon} alt="email" style={styles.socialIcon} />
           </a>
         )}
         {devDotTo && (
-          <a href={`https://dev.to/${devDotTo}`} target="_blank" rel="noopener noreferrer">
-            <img src={devDotToIcon} alt="Dev.to" className="socialIcon" />
+          <a
+            href={`https://dev.to/${devDotTo}`}
+            target="_blank"
+            rel="noopener noreferrer"
+            style={styles.link}
+          >
+            <img src={devDotToIcon} alt="Dev.to" style={styles.socialIcon} />
           </a>
         )}
         {gitHub && (
-          <a href={`https://github.com/${gitHub}`} target="_blank" rel="noopener noreferrer">
-            <img src={gitHubIcon} alt="GitHub" className="socialIcon" />
+          <a
+            href={`https://github.com/${gitHub}`}
+            target="_blank"
+            rel="noopener noreferrer"
+            style={styles.link}
+          >
+            <img src={gitHubIcon} alt="GitHub" style={styles.socialIcon} />
           </a>
         )}
         {instagram && (
@@ -67,8 +94,9 @@ const Footer = (props) => {
             href={`https://www.instagram.com/${instagram}`}
             target="_blank"
             rel="noopener noreferrer"
+            style={styles.link}
           >
-            <img src={instagramIcon} alt="Instagram" className="socialIcon" />
+            <img src={instagramIcon} alt="Instagram" style={styles.socialIcon} />
           </a>
         )}
         {linkedIn && (
@@ -76,18 +104,29 @@ const Footer = (props) => {
             href={`https://www.linkedin.com/in/${linkedIn}`}
             target="_blank"
             rel="noopener noreferrer"
+            style={styles.link}
           >
-            <img src={linkedInIcon} alt="LinkedIn" className="socialIcon" />
+            <img src={linkedInIcon} alt="LinkedIn" style={styles.socialIcon} />
           </a>
         )}
         {medium && (
-          <a href={`https://medium.com/@${medium}`} target="_blank" rel="noopener noreferrer">
-            <img src={mediumIcon} alt="Medium" className="socialIcon" />
+          <a
+            href={`https://medium.com/@${medium}`}
+            target="_blank"
+            rel="noopener noreferrer"
+            style={styles.link}
+          >
+            <img src={mediumIcon} alt="Medium" style={styles.socialIcon} />
           </a>
         )}
         {twitter && (
-          <a href={`https://twitter.com/${twitter}`} target="_blank" rel="noopener noreferrer">
-            <img src={twitterIcon} alt="Twitter" className="socialIcon" />
+          <a
+            href={`https://twitter.com/${twitter}`}
+            target="_blank"
+            rel="noopener noreferrer"
+            style={styles.link}
+          >
+            <img src={twitterIcon} alt="Twitter" style={styles.socialIcon} />
           </a>
         )}
         {youTube && (
@@ -95,12 +134,13 @@ const Footer = (props) => {
             href={`https://www.youtube.com/c/${youTube}`}
             target="_blank"
             rel="noopener noreferrer"
+            style={styles.link}
           >
-            <img src={youTubeIcon} alt="YouTube" className="socialIcon" />
+            <img src={youTubeIcon} alt="YouTube" style={styles.socialIcon} />
           </a>
         )}
       </div>
-      <p className="small" style={{ marginTop: 0, color: "white" }}>
+      <p className="small" style={{ marginTop: 0 }}>
         Created by {name}
       </p>
     </div>
@@ -122,7 +162,6 @@ Footer.propTypes = {
   primaryColor: PropTypes.string,
   twitter: PropTypes.string,
   youTube: PropTypes.string,
-
 };
 
 export default Footer;
